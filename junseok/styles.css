@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+section {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+section:nth-of-type(1) {
+  display: flex;
+}
+
+.card {
+  padding: 1rem;
+  width: max-content;
+  border: 1px solid #000;
+}
+
+.card:not(:nth-of-type(1)) {
+  margin-left: 1rem;
+}
+
+.card span {
+  margin: 1rem 0;
+  display: block;
+}
+
+.basket__button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: teal;
+  color: #fff;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+}
+
+.basket__button:hover {
+  opacity: 1;
+}
+
+#ul {
+  margin-top: 1rem;
+}
+#ul li {
+  margin: 0.5rem 0;
+}

@@ -3,7 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Shopping Basket</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer type="module" src="./app.js"></script>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section>
+        <div class="card">
+          <h3>사과</h3>
+          <span>1000원</span>
+          <button type="button" class="basket__button">장바구니에 추가</button>
+        </div>
+        <div class="card">
+          <h3>바나나</h3>
+          <span>1500원</span>
+          <button type="button" class="basket__button">장바구니에 추가</button>
+        </div>
+      </section>
+      <section>
+        <h2>장바구니</h2>
+        <ul id="ul"></ul>
+      </section>
+      <!-- <hr />
+      <section>
+        <h4 id="total"></h4>
+      </section> -->
+    </main>
+  </body>
 </html>

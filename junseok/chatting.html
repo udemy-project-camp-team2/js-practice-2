@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatting</title>
+    <link rel="stylesheet" href="./chatting.css" />
+    <script defer type="module" src="./chatting.js"></script>
+  </head>
+  <body>
+    <form id="chatting__form">
+      <input
+        autocomplete="off"
+        type="text"
+        name="username"
+        placeholder="사용자명"
+      />
+      <input
+        autocomplete="off"
+        type="text"
+        name="message"
+        placeholder="메시지를 입력하세요"
+      />
+      <button type="submit" name="send">전송</button>
+    </form>
+    <ul id="chats__container">
+      <li class="chats"><b>User1:</b> <span>안녕하세요!</span></li>
+      <li class="chats"><b>User2:</b> <span>반갑습니다!</span></li>
+    </ul>
+  </body>
+</html>
