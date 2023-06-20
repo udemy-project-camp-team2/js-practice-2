@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <h1>할 일 목록</h1>
+  </header>
+  <main>
+    <form id="form_box">
+      <input type="text" id="input" placeholder="할 일을 입력하세요" />
+      <button type="submit">추가</button>
+    </form>
+    <ul id="list">
+
+    </ul>
+  </main>
+
+  <script>
+    const Form_Box = document.getElementById("form_box");
+    const Input = document.getElementById("input");
+    const List = document.getElementById("list");
+
+    Form_Box.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const todo = Input.value;
+      if (todo) {
+        addList(todo);
+        Input.value = "";
+      }
+    });
+
+    List.addEventListener("click", (e) => {
+      if (e.target.tagName === "BUTTON") {
+        deleteTask(e.target.parentElement);
+      }
+    });
+
+    function addList(todo) {
+      const item = document.createElement("li");
+      item.classList.add("task-item");
+      item.textContent = todo;
+
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "삭제";
+
+      item.appendChild(deleteButton);
+      List.appendChild(item);
+    }
+
+    function deleteTask(item) {
+      List.removeChild(item);
+    }
+
+  </script>
+</body>
+
+</html>

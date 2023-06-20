@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <p id="apple"></p>
+    <button class="apple_btn" type="button">장바구니 추가</button>
+  </div>
+  <div>
+    <p id="banana"></p>
+    <button class="banana_btn" type="button">장바구니 추가</button>
+  </div>
+  <div id="cart">
+    <ul class="cart-item"></ul>
+  </div>
+
+  <script>
+    const apple = document.getElementById('apple');
+    const banana = document.getElementById('banana');
+
+    const apple_btn = document.querySelector('.apple_btn');
+    const banana_btn = document.querySelector('.banana_btn');
+    const cart = document.getElementById('cart');
+
+    const cartItem = document.querySelector('.cart-item');
+
+    apple.innerHTML = `사과 <br> 1000원`;
+    banana.innerHTML = `바나나 <br> 1000원`;
+
+    const appleArr = [
+      name = '사과',
+      price = 1000,
+    ];
+
+    const bananaArr = [
+      name = '바나나',
+      price = 2000,
+    ];
+
+    apple_btn.addEventListener('click', () => {
+      addList(appleArr)
+    })
+
+    banana_btn.addEventListener('click', () => {
+      addList(bananaArr)
+    })
+
+
+    function addList(e) {
+      const li = document.createElement("li");
+      li.textContent = `${e}`;
+      cartItem.appendChild(li)
+    }
+  </script>
+</body>
+
+</html>
